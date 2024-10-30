@@ -26,8 +26,6 @@ public class PlayerController : MonoBehaviour
     Vector3 rotationinput = Vector3.zero;
     CharacterController characterController;
 
-    private bool lastIsMoving;
-
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -42,7 +40,6 @@ public class PlayerController : MonoBehaviour
     {
         Look();
         Move();
-        CheckMovement();
     }
 
     private void Move()
@@ -81,25 +78,5 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(Vector3.up * rotationinput.x);
         playerCamera.transform.localRotation = Quaternion.Euler(-cameraVerticalAngle,0f,0f);
-    }
-
-    public void CheckMovement()
-    {
-        bool moving;
-
-        if (rotationinput.magnitude >= 0.35 || moveInput.x != 0 || moveInput.z != 0)
-        {
-            moving = true;
-        }
-        else
-        {
-            moving = false;
-        }
-
-        if(moving != lastIsMoving)
-        {
-            lastIsMoving = moving;
-            EventManager.current.PlayerMovementEvent.Invoke(lastIsMoving);
-        }
     }
 }

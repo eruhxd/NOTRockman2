@@ -229,8 +229,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1978467513239300693}
   - component: {fileID: 8682342892618788059}
-  - component: {fileID: 8641448868176789820}
-  - component: {fileID: 1312794612055422320}
+  - component: {fileID: 2669904168488004745}
+  - component: {fileID: 3816765554677085513}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -280,7 +280,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8641448868176789820
+--- !u!114 &2669904168488004745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,16 +289,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5905599096287433852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ace7f554ccd7cfe44b9891b73d8199bd, type: 3}
+  m_Script: {fileID: 11500000, guid: efe9d62e44fdd4749a8cce649f1f080a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1715738036428168611}
-  gravityScale: -25
-  walkSpeed: 5
-  runSpeed: 8
+  gravityScale: -20
+  walkSpeed: 7
+  runSpeed: 9
   rotationSensibility: 300
-  jumpHeight: 1.5
---- !u!114 &1312794612055422320
+  jumpHeight: 2
+--- !u!114 &3816765554677085513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,12 +307,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5905599096287433852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 461e6f8344e5cb14ba8fe7be026668b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5258cc740cb9e447a8cbaf12cab3c46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingWeapons:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 790232543238721100, guid: 57a5cf918bf4fd44fa800579b4b2f82e, type: 3}
+  - {fileID: 6971120961312762624, guid: ba80dcb7c2c81fc49ab409f8d0359d63, type: 3}
   weaponParentSocket: {fileID: 2507950968441511255}
   defaultWeaponPosition: {fileID: 4149670622166860337}
   aimingPosition: {fileID: 6326741848008092210}
@@ -356,7 +356,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6326741848008092210}
-  - component: {fileID: 3607836167201313691}
   m_Layer: 0
   m_Name: AimParentSocket
   m_TagString: Untagged
@@ -379,15 +378,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2373179387357674700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3607836167201313691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7384811291898880771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749c8525976c77d48bc7f82f4d6d4bb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
